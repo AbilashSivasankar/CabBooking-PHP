@@ -17,7 +17,7 @@
         </div>
     </div>
 </section>
-
+<!--
 <script>
     $(document).scroll(function() { 
         $('#topNavBar').removeClass('bg-purple navbar-light navbar-dark bg-gradient-purple text-light')
@@ -30,4 +30,4 @@
     $(function(){
         $(document).trigger('scroll')
     })
-</script>
+</script>-->
