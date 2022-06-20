@@ -1,0 +1,28 @@
+runtime: php74
+
+runtime_config:
+  document_root: .
+  
+handlers:
+- url: /
+  script: index.php
+
+
+# Serve images as static resources.
+- url: /(.+\.(gif|png|jpg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg)$
+
+# Serve your app through a front controller at index.php or public/index.php.
+- url: .*
+  script: auto
+
+env_variables:
+
+  CLOUDSQL_USER: root
+  CLOUDSQL_DB: cabdb
+  CLOUDSQL_PASSWORD: test123
+  CLOUDSQL_DSN: /cloudsql/mtech-amrita:us-central1:cabdb
+
+error_handlers: 
+- file: 404.html
